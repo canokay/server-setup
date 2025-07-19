@@ -1,17 +1,17 @@
 #!/bin/bash
 set -e
 
-# Sistem güncellemesi
+# System update
 apt update && apt upgrade -y
 
-# Gerekli paketlerin kurulumu
-echo "[+] Git kuruluyor..."
+# Install required packages
+echo "[+] Installing Git..."
 apt install -y git
 
-echo "[+] Make kuruluyor..."
+echo "[+] Installing Make..."
 apt install -y make
 
-echo "[+] Docker kuruluyor..."
+echo "[+] Installing Docker..."
 apt install -y \
     ca-certificates \
     curl \
@@ -28,17 +28,17 @@ echo \
 apt update
 apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Docker servisini başlat ve enable et
+# Start and enable Docker service
 systemctl enable --now docker
 
-echo "[+] Docker ve Docker Compose Plugin kuruldu."
+echo "[+] Docker and Docker Compose Plugin installed."
 
-# Git kullanıcı adı ve email ayarlama
-read -p "Git kullanıcı adınızı girin: " git_username
-read -p "Git email adresinizi girin: " git_email
+# Set Git username and email
+read -p "Enter your Git username: " git_username
+read -p "Enter your Git email address: " git_email
 git config --global user.name "$git_username"
 git config --global user.email "$git_email"
 
-echo "[+] Git kullanıcı adı ve email ayarlandı."
+echo "[+] Git username and email configured."
 
-echo "[✓] Tüm işlemler başarıyla tamamlandı." 
+echo "[✓] All operations completed successfully."
