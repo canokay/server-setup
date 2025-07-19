@@ -10,6 +10,18 @@ Easy update, upgrade, Git, Make, and Docker install script for Debian-based syst
 - Docker service setup and enable
 - Global Git username and email configuration
 
+## Quick Start (One-liner)
+
+Run the following command in your terminal:
+
+```bash
+curl -O https://raw.githubusercontent.com/canokay/server-setup/main/setup.sh && chmod +x setup.sh && sudo ./setup.sh
+```
+
+You will be prompted to enter your Git username and email.
+
+---
+
 ## Quick Start
 
 ### 1. Download the setup script
