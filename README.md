@@ -10,6 +10,12 @@ Easy update, upgrade, Git, Make, and Docker install script for Debian-based syst
 - Docker service setup and enable
 - Global Git username and email configuration
 
+## Install curl
+
+```bash
+apt update && apt install -y curl
+```
+
 ## Quick Start (One-liner)
 
 Run the following command in your terminal:
